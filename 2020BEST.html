@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><!--head start-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+        <link rel='stylesheet' href='2020BEST.css'>
+        <title>Jeremiah Pitts Portfolio | 2020 BEST Robot Case Study</title>
+        <link rel="icon" href="images\jp-logo.png" type="image/">
+        <script src="https://kit.fontawesome.com/269cae3fa0.js" crossorigin="anonymous"></script>
+    </head><!--head end-->
+    <body><!--body start-->
+        <div class='cursor fade-in'></div>
+        <header>
+            <!--header start-->
+            <nav>
+                <!--nav start-->
+                <a href='index.html' class='smaller-header hover-this'>jeremiah pitts</a>
+                <div class='right-container'>
+                    <a href='about.html' class='smaller-header even-smaller-header hover-this'>about me</a>
+                    <a href='resume.html' class='smaller-header even-smaller-header hover-this'>resumé</a>
+                    <a href='contact.html' class='smaller-header even-smaller-header hover-this'>contact me</a>
+                </div>
+            </nav>
+            <!--nav end-->
+        </header>
+        <!--header end-->
+
+        <div class = 'intro'>
+            <p class = 'title'>BEST Robotics 2020 - Redshift</p>
+            <div class = 'bar'></div>
+            <img src = 'images\BEST2020_1.jpg' class='intro-img'></img>
+            <p class= 'sum'>A Comprehensive Engineering Design Case Study</p>
+            <p class = 'intro-text' style='margin-left: 36%;'>
+                Our challenge was to design and build a robot to sample, identify, and separate individual cells, apply vaccines where needed to immunize uninfected cells, and autonomously collect cell samples. Specifically, we needed to complete the following tasks.
+            </p>
+            <ul class = 'int-bul'>
+                <li>Collect cells on ground and on top and beneath isolation platforms.</li>
+                <li>Transport and deposit cells in the Test Staging Area (TSA).</li>
+                <li>Collect tested cells from the TSA and deliver them to isolation zones and the top of 6” and 12” isolation platforms.</li>
+                <li>Hold, transport, and deliver vaccines to isolation zones and top of 6” or 12” isolation platforms.</li>
+                <li>Hold, transport, and deliver super vaccine to top of 6” or 12” isolation platforms.</li>
+                <li>Autonomously travel to predetermined grid zones, collect cells, and deliver them to the TSA.
+                    This notebook will detail the process we used to develop our strategy, robot, and software.</li>
+            </ul>
+            <p class = 'intro-text' style = 'width: 120%; margin-left: 0;'><br/>We began by creating a design process to use throughout the development and construction of our robot. It was also used to design our strategy and software. It consisted of the following steps.
+
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Define Design Challenge:</strong>
+                For each robot task, we created a set of criteria and constraints to clearly define a plan to achieve our strategic goals. The constraints were the limiting factors, such as competition rules, size, and weight limits. These were the same for each design challenge. The criteria were the features the component needed to possess, such as robustness, speed, a secure grip, or easy maneuverability.
+                
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brainstorm Solutions:</strong>
+                In order to proceed efficiently, team members were asked to research potential solutions by looking at industrial and commercial examples prior to meeting. They were also encouraged to imagine unusual or potentially impossible solutions. The goal of each brainstorming session was to generate as many ideas as possible, regardless of feasibility or legality. Therefore, the constraints were temporarily ignored so that every facet of the design challenge could be explored and possible solutions discovered. The sessions were designed to be fun and relaxed so members were not afraid to make a suggestion, no matter how unusual. Our hope was that strange ideas might inspire previously unconsidered ideas in other team members' minds. All team members participated, including the marketing and outreach departments, so we would maximize the number and range of ideas; and all had an equal vote in every step of the process. To accommodate our different schedules, the brainstorming process took place over two days via Zoom. After completion, the group analyzed the list and eliminated the ideas which clearly violated the constraints, were deemed unethical, or for which a concept demonstrator (potential design) could not be imagined.
+                
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analytical Evaluation of Initial Design Alternatives:</strong>
+                For each remaining idea, concept demonstrators were explored through sketches and cardboard models before the team met again. At the next meeting, the ideas were placed into a series of decision matrices and mathematically analyzed based on the criteria defined earlier. For each criterion, a score of one to five was given, with one being the lowest. Each team member voted independently and the rounded averages of the scores were put into the decision matrix. The total for each concept was calculated and the ones with the highest scores were chosen to move on to the next phase. 
+                
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop Solution:</strong>
+                After an idea was chosen by the entire team, sub-teams under the direction of the captain were formed to develop a detailed plan listing every aspect of the design. Taken into consideration were the constraints and criteria developed during the first phase, the offensive and defensive strategies planned, as well as the functionality of the design in relation to the overall robot plan. Sketches were initially drawn by hand to formulate a basic design. Next, they were sketched and refined in Onshape, a cloud based CAD program which allowed modifications from team members in different locations due to COVID restrictions. Simulation was done in Onshape to test functionality interacting with field pieces. 
+                
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct and Test Prototypes:</strong>
+                Moving into the prototyping phase, the CAD sketches were often used to first construct models in paper and cardboard. These versions were quicker to make and saved materials so that the process could proceed more efficiently and economically. The prototypes and CAD sketches were refined and eventually manufactured out of the chosen materials for the final component. Manufacturing was done by the same team that designed the component to ensure adherence to specifications. Critical components were manufactured on a CNC mill, laser cutter, or router if possible, but access to the machines was limited due to COVID restrictions so most components were made with manual machines.
+                <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prototypes were tested and the data was analyzed by the strategy team to determine what improvements could be made as well as the validity of the design. The process was repeated and modifications were made until the design reached its desired form and accomplished the task as efficiently as possible.
+
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analytical Evaluation of Final Design Alternatives:</strong>
+If more than one prototype was completed, they were tested against each other and their scores were analyzed to determine the final design to be used on the robot. 
+                <br/><br/><strong><u>Strategy</u></strong>
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Define Strategy Challenge:</strong>
+                    Before we began designing our robot, we developed a strategy to guide the process. We defined the problem by closely examining the rules of the game and developing criteria and constraints with which to evaluate our solutions. Our criteria were scoring potential, ease of design/build, and the likelihood of completion in 8 weeks. Our constraint was BEST rule compliance.
+                <br/><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;Brainstorm Solutions:</strong>
+                During brainstorming, we proposed a total of 5 strategies (Table 1) for the game.       
+            </p>
+            <p class = 'table-intro'>Table 1, Strategy Concepts</p>
+            <br/>
+            <div class = 'table'>
+                    <p>1. Collect, test, and score all on ground cells only.</p>
+                    <p>2. Collect, test, and score all on ground and platform top cells only.</p>
+                    <p>3. Deliver vaccines and collect, test, and score ground cells only. </p>
+                    <p>4. Deliver vaccines and collect, test, and score ground and platform top cells.</p>
+                    <p>5. Complete all tasks.</p>
+            </div>
+            <p class = 'intro-text' style = 'width: 120%; margin-left: 0;'>
+                <br/><strong>Analytical Evaluation of Initial Strategies:</strong>
+                We determined the scoring potential of each strategy by calculating a points-per-minute estimate for cell and vaccine manipulation, both singly and in bulk (See Appendix A, Table A1). This scoring potential and the other criteria were placed in a decision matrix (See Appendix A, Table A2) and each strategy was quantitatively compared.
+                
+                <br/><br/><strong>Develop Strategy:</strong>
+                Based on the results of the decision matrix, we selected strategy 5, completing all tasks. A single unidentified cell in the wrong position at the end of the game has the potential to decrease the score significantly. For this reason, identifying and scoring all cells is essential.
+                
+                After the general strategy was determined, we prioritized individual tasks to further guide our design. The scoring potential analysis showed that bulk cell manipulation was the top priority, followed by delivery of vaccines, followed by individual cell manipulation.
+                
+                Offensive and defensive strategies are summarized in Tables 2 and 3.   
+            </p>
+            <p class = 'table-intro'>Table 2, Offensive Strategies</p>
+            <br/>
+            <ul class = 'table'>
+                <p>●  Create a fast robot that can traverse the playing field quickly.</p>
+                <p>●  Develop a lift that can reach all levels (ground, 6” and 12” platforms).</p>
+                <p>●  Prioritize the delivery of cells whenever possible since this determines score.</p>
+                <p>●  Deliver cells and vaccines simultaneously to save travel time.</p>
+                <p>●  Transport and deliver cells and vaccines in bulk.</p>
+                <p>●  Transport and deliver vaccines to isolation zones and low isolation platform.</p>
+                <p>●  Transport and deliver super vaccine to high isolation platform since it does not roll.</p>
+            </ul>
+            <p class = 'table-intro'><br/>Table 3, Defensive Strategies</p>
+            <br/>
+            <ul class = 'table'>
+                <p>●  Design a robust robot that will avoid breakdowns.</p>
+                <p>●  Ensure vaccines delivered to low platform do not roll off.</p>
+                <p>●  Drive careful when around platforms so as to not move them and incur penalties.</p>
+                <p>●  Ensure cells delivered to the TSA do not get pushed into the spotter’s box.</p>
+                <p>●  Ensure clear communications between spotter and driver when working in the TSA to avoid penalty for manipulating cells when the robot is in the TSA.</p>
+                <p>●  Ensure the driver communicates clearly with the referee during the autonomous period</p>
+                <p>●  Secure all wiring and all robot components to avoid electrical problems and power loss.</p>
+                <p>●  Instruct spotters and drivers on all rules to avoid penalties or reduced scoring.</p>
+            </ul>
+            <p class = 'intro-text' style = 'width: 120%; margin-left: 0;'>
+                <br/><strong>Analytical Evaluation of Final Strategy:</strong>
+                    Analyzing the points accrued during our test trials after the robot was completed (See Appendix B, Table B1) we determined our strategy was effective. We are consistently able to complete all tasks within the time period.
+                    <br/>
+                <br/><strong>Summary of Game Strategy:</strong>
+                    During a match, we will begin by loading the vaccines then autonomously collecting cells in grid 3D to obtain the super vaccine. Attempting this before the cells are disturbed gives us the best chance to complete the task, which is important because the super vaccine is necessary for complete immunization, a requirement for maximum points.
+                    
+                    In the event that the autonomous task fails, we will immediately return to the Robot Starting Area (RSA) and initiate the backup autonomous routine, aiming for the cells in grid 2E. Next we will move the isolation zone in grid 5F to the edge of the field to prevent it obstructing our drive path. 
+                    
+                    Cells in grids 2E and 2F are the next targets, allowing the spotter to begin testing and stacking cells for pickup. At any point, if there are three uninfected or three infected cells ready, the driver will return to the TSA to start delivery. Delivering cells and vaccines to the high isolation platform takes priority since it is the most points. Isolation of infected cells is next in priority, followed by delivery and vaccination of the low isolation platform, then the isolation zones. Vaccines will be delivered simultaneously with cell stack delivery to save travel time. If cells are not ready for delivery, the driver will continue collecting. A detailed sequence is outlined in Appendix C, Table C1.
+                    <br/>
+                <br/><strong>Robot Engineering Design</strong><br/>
+                <strong>Cell Actuator</strong><br/>
+                <br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Define Design Challenge: </strong>
+                Manipulating cells was the highest priority that emerged from our strategy process and appeared to be the most difficult design challenge, so we began with it. To achieve the ability to collect, transport, and deliver cells to all locations quickly and safely, our criteria was that it be reliable, secure, robust, lightweight, compact, and able to handle multiple cells at the same time. Our constraints were that it comply with BEST rules for operation, materials, and dimensions.
+                <br/>
+                <br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brainstorm Solutions: </strong>
+                Researching potential solutions and brainstorming led to proposals for 22 design concepts. Ideas were inspired by warehouse equipment, assembly line machines, and rodeos. We eliminated the designs for which a viable concept demonstrator could not be created or ones that violated the constraints by breaking the rules or material limits (See Appendix D, Table D1).
+                <br/>
+                <br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analytical Evaluation of Initial Design Alternatives: </strong>
+                We sketched and created concept demonstrators out of cardboard (See Appendix E, Figures E1 and E2) and completed a decision matrix to quantitatively analyze them (See Appendix A, Table A3). Based on the results, we selected the gated forklift, bulldozer, and pincer for further development. Most of the eliminated designs scored poorly based on their grip insecurity or lack of reliability.
+                <br/>
+                <br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Develop Solutions: </strong>
+                Before proceeding, we reviewed the constraints and criteria developed during the first phase, the offensive and defensive strategies planned, and the functionality of the design concept in relation to the overall robot. Sketches and cardboard prototypes were refined and then CAD was sketched and simulated in Onshape.
+            </p>
+        <footer>
+            <div class='social-menu'>
+                <a href='https://www.google.com/maps/place/Arlington,+TX/@32.7020541,-97.2755005,11z/data=!3m1!4b1!4m5!3m4!1s0x864e62d2e40898d3:0xb5ef6ac1fa05351!8m2!3d32.735687!4d-97.1080656'
+                    target='_blank'><i class="fas fa-map-marker-alt hover-this"></i></a>
+                <a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=jeremiahnpitts@gmail.com' target='_blank'><i
+                        class="far fa-paper-plane hover-this"></i></a>
+                <a href='https://grabcad.com/jeremiah.pitts-3' target='_blank'
+                    onclick="window.open('https://github.com/macro-pi');"><i class="fas fa-code-branch hover-this"></i></a>
+                <a href='tel:+18172645290'><i class="fas fa-mobile-alt hover-this"></i></a>
+            </div>
+        </footer>
+    </body>
+    <!--body end-->
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+        (function () {
+
+            const link = document.querySelectorAll('body');
+
+            const animateit = function (e) {
+                const span = this.querySelector('');
+                const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
+
+                    move = 25,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+
+                span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+                if (e.type === 'mouseleave') span.style.transform = '';
+            };
+
+            const editCursor = e => {
+                const { clientX: x, clientY: y } = e;
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+            };
+
+            link.forEach(b => b.addEventListener('mousemove', animateit));
+            link.forEach(b => b.addEventListener('mouseleave', animateit));
+            window.addEventListener('mousemove', editCursor);
+
+        })();
+
+        let hover_mouser = document.getElementsByClassName('hover-this');
+        for (let object of hover_mouser) {
+            object.addEventListener('mouseover', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(8)';
+            })
+            object.addEventListener('mouseout', () => {
+                cursor.style.transform = '';
+            })
+        }
+    </script>
+</html>
